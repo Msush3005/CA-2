@@ -36,7 +36,7 @@ app.get("/user",async(req,res)=>{
         res.status(500).json(user)
     } catch (error) {
         console.log(error)
-        res.status(500).json("internal server error")
+        res.status(500).json("something went wrong")
     } 
 })
 app.get("/user/:id", async(req,res)=>{
@@ -45,7 +45,7 @@ app.get("/user/:id", async(req,res)=>{
         res.status(500).json(user)
     } catch (error) {
         console.log(error)
-        res.status(500).json("internal server error")
+        res.status(500).json("something went wrong")
     } 
 })
 
@@ -62,7 +62,7 @@ app.delete("/user/:id",async(req,res)=>{
         res.status(500).json({message:"deleted"})
     } catch (error) {
         console.log(error)
-        res.status(500).json("internal server error")
+        res.status(500).json("something went wrong")
     } 
 })
 app.listen(port,()=>{
